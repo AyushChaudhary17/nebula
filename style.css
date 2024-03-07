@@ -21,12 +21,12 @@ html{
 }
 
 body{
-    
+    background: black;
     /* background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); */
-    background: url("./pexels-pixabay-268533.jpg");
+    /* background: url("./pexels-pixabay-268533.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    object-fit: cover;
+    object-fit: cover; */
  
 }
 
@@ -48,6 +48,15 @@ p{
     font-size: 1.5rem;
 }
 
+.hidden{
+    display: none;
+    /* transform: display 10s ease-in-out; */
+    /* transform: all 1s ease-in-out; */
+}
+.show{
+    display: block;
+}
+
 /* ..................... CONTAINER CLASS ........................ */
 
 .container{
@@ -61,6 +70,8 @@ p{
 .header{
     /* height: 10vh; */
     /* padding: 0.1rem; */
+    position: sticky;
+    top: 0px;
     margin-top: 1rem;
     background: rgba(255, 255, 255, 0.12);
     border-radius: 50px;
@@ -88,6 +99,39 @@ p{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.076);
     border-radius: 50px;
 }
+.logobox .titlebox h1{
+    /* border: 2px solid red; */
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.logobox .titlebox div{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    /* height: 2.8rem; */
+    font-size: 10rem;
+    border-radius: 50px;
+    /* border: 2px solid green; */
+    background-color: white;
+    /* margin-left: 0.8rem; */
+    padding-bottom:1rem;
+    /* margin-top: 1rem; */
+    opacity: 0;
+    animation-name: blink;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes blink{
+    from{
+        opacity: 0; 
+    }
+    to{
+        opacity: 1;
+    }
+}
 
 /* ............... INSIDE logobox.................. */
 
@@ -97,7 +141,7 @@ p{
     /* border: 2px solid yellow; */
     border-radius: 50px;
 }
-.logobox .imagebox img{
+.logobox .imagebox a img{
     width: 100%;
     height: 100%;
     border-radius: 50px;
@@ -155,6 +199,7 @@ ul .listitems a h2:hover{
 }
 .navbox .profilebox{
     width: 20%;
+    /* display: none; */
     height: 100%;
     /* border: 2px solid green; */
     border-radius: 50px;
@@ -177,6 +222,97 @@ ul .listitems a h2:hover{
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50px;
+}
+
+
+/*  ....................................... Hamburger Menu styling ........................ */
+
+.header .hamburger-menu{
+    height: 500px;
+    width: 400px;
+    padding: 1rem;
+    /* display: none; */
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.123);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 5;
+
+    /* transform: translateX(300%); */
+
+}
+
+.hamburger-menu .cross{
+    width: 100%;
+    height: 10%;
+    /* border: 2px solid green; */
+    text-align: right;
+    padding: 1rem;
+}
+.hamburger-menu .cross .crossIcon{
+    font-size: 3rem;
+    color: white;
+    /* border: 2px solid yellow; */
+}
+
+/*  ................ Hamburger ImageBox ........... */
+
+.hamburger-menu .burgerImageBox{
+    width: 100%;
+    height: 40%;
+    margin-top: 1rem;
+    /* border: 2px solid yellow; */
+    /* text-align: center; */
+}
+
+.burgerImageBox .burgerImage{
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 50%;
+    margin: 0 25%;
+    border-radius: 50px;
+
+}
+.burgerImageBox .burgerImage .bimage{
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+/* .................... Hamburger burger List style ..................... */
+
+
+.hamburger-menu .burgerList{
+    width: 100%;
+    height: 40%;
+    /* border: 2px solid white; */
+    margin-top: 5rem;
+}
+
+.burgerList ul{
+    list-style: none;
+    text-align: center;
+}
+.burgerList ul .blistItems{
+    /* border: 2px solid red; */
+    margin-top: 1rem;
+    border-bottom: 0.2px solid white;
+    padding-bottom: 1rem;
+}
+.burgerList ul .blistItems a{
+    text-decoration: none;
+    color: white;
+}
+.burgerList ul .blistItems a h3{
+    font-weight: 400;
 }
 
 
@@ -237,6 +373,7 @@ ul .listitems a h2:hover{
     width: 40%;
     /* height: 40%; */
     text-align: center;
+    color: white;
     /* border:  2px solid red; */
     /* margin-left: 1rem;
     margin-right: 1rem; */
