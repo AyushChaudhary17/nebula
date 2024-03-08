@@ -58,21 +58,155 @@
             </div>
         </nav>
     </header>
-    <main class="container main">
+
+    <section class="main">
+        <main class="chatarea">
+            <div class="chatbox-message-content">
+                                
+                <!-- <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+    
+                <div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+
+                                
+                <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+    
+                <div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+
+                                
+                <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+    
+                <div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+
+                                
+                <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+    
+                <div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+
+                                
+                <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+    
+                <div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div> -->
+            </div>
+            
+
+        </main>
+        <div class="inputarea">
+            <!-- <input type="text" class="userinput" placeholder="Enter your promt here"> -->
+            <textarea name="" id="" cols="" rows="" class="userinput" placeholder="Enter your prompt here"></textarea>
+            <div class="icons">
+                <i class="fa-solid fa-arrow-up-from-bracket icon enter"></i>
+                <i class="fa-solid fa-microphone icon microphone"></i>
+            </div>
+    </section>
+
+    <!-- <main class="container main">
         <div class="chatbox">
             <div class="chatarea"></div>
             <div class="inputarea">
-                <!-- <input type="text" class="userinput" placeholder="Enter your promt here"> -->
-                <textarea name="" id="" cols="" rows="" class="userinput" placeholder="Enter your prompt here"></textarea>
-                <div class="icons">
+                <input type="text" class="userinput" placeholder="Enter your promt here"> -->
+                <!-- <textarea name="" id="" cols="" rows="" class="userinput" placeholder="Enter your prompt here"></textarea> -->
+                <!-- <div class="icons">
                     <i class="fa-solid fa-arrow-up-from-bracket icon"></i>
                     <i class="fa-solid fa-microphone icon"></i>
                 </div>
             </div>
         </div>
-    </main>
+    </main> --> 
+    <footer class="footer">
+       <p>nebula copyright &copy;, 2024 all rights are reserved.</p> 
+    </footer>
 
-    <script type="module">
+    <script type="text/javascript">
         const profileImage = document.querySelector(".profileimg")
         const menu = document.querySelector(".hamburger-menu");
         const cross = document.querySelector(".hamburger-menu .cross .crossIcon");
@@ -105,6 +239,73 @@
         }
 
         titleAnimation();
+
+        // ..................... USER INPUT .......................
+
+        const textarea = document.querySelector(".userinput");
+        const enterbutton = document.querySelector(".inputarea .icons .enter");
+        const microphone = document.querySelector(".inputarea .microphone");
+        const chatboxMessageContent = document.querySelector(".chatbox-message-content");
+
+        let userinput;
+
+        enterbutton.addEventListener("click",()=>{
+            userinput = textarea.value;
+            pushMessage();
+            setTimeout(pushResponse, 1000);
+
+        })
+
+        function pushMessage(){
+            const today = new Date();
+
+            let message = `<div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        ${textarea.value.trim().replace(/\n/g, "<br>\n")}
+
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        ${today.toLocaleTimeString()}
+                    </span>
+
+                </div>`;
+
+            chatboxMessageContent.insertAdjacentHTML("beforeend", message);
+            textarea.value = null;
+            scrollBottom();
+
+        }
+        
+        function pushResponse(){
+            const apiResponse = "Hello I am Nebula \n what can I do for you..";
+            const today = new Date();
+
+            let message = `<div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        
+                        ${apiResponse}
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        ${today.toLocaleTimeString()}
+                    </span>
+    
+                </div>`;
+            
+            chatboxMessageContent.insertAdjacentHTML("beforeend", message);
+            scrollBottom();
+
+        }
+
+
+        // Scrolling Funtion ......
+
+        function scrollBottom(){
+            chatboxMessageContent.scrollTo(0,chatboxMessageContent.scrollHeight);
+        }
+
+
+
     </script>
 </body>
 </html>
