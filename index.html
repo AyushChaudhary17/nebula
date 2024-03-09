@@ -180,13 +180,18 @@
             
 
         </main>
-        <div class="inputarea">
-            <!-- <input type="text" class="userinput" placeholder="Enter your promt here"> -->
+        <form action="" class="inputarea">
+
             <textarea name="" id="" cols="" rows="" class="userinput" placeholder="Enter your prompt here"></textarea>
             <div class="icons">
-                <i class="fa-solid fa-arrow-up-from-bracket icon enter"></i>
+                <input type="submit" value="enter" class="inputBtn">
+
+                    <!-- <i class="fa-solid fa-arrow-up-from-bracket icon enter"></i> -->
+                
                 <i class="fa-solid fa-microphone icon microphone"></i>
             </div>
+        </form>
+                    <!-- <input type="text" class="userinput" placeholder="Enter your promt here"> -->
     </section>
 
     <!-- <main class="container main">
@@ -246,10 +251,12 @@
         const enterbutton = document.querySelector(".inputarea .icons .enter");
         const microphone = document.querySelector(".inputarea .microphone");
         const chatboxMessageContent = document.querySelector(".chatbox-message-content");
+        const inputForm = document.querySelector(".inputarea");
 
         let userinput;
 
-        enterbutton.addEventListener("click",()=>{
+        inputForm.addEventListener("submit",(e)=>{
+            e.preventDefault();
             userinput = textarea.value;
             pushMessage();
             setTimeout(pushResponse, 1000);
