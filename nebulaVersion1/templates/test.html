@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 90vw;
+            height: 90vh;
+            border: 2px solid red;
+            padding: 2rem;
+            position: relative;
+        }
+        main .div1{
+            width: 0px;
+            height: 0px;
+            border-radius: 50%;
+            background-color: lime;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            opacity: 0;
+            animation: bounce;
+            animation-duration: 1s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+
+        }
+
+        
+
+        @keyframes bounce {
+            from{
+                
+                width: 0px;
+                height: 0px;
+
+            }
+            to{
+                top: 50%;
+                left: 50%;
+                width: 300px;
+                height: 300px;
+                transform: translate(-50%,-50%);
+                border-radius: 50%;
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+
+        .div2{
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation-name: moveleft;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes moveleft {
+            from{
+                left: 50%;
+            }to{
+                left: 40%;
+                width: 150px;
+                height: 150px;
+
+            }
+
+        }
+
+        .div3{
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation-name: moveright;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes moveright {
+            from{
+                left: 50%;
+                
+            }to{
+                left: 60%;
+                width: 150px;
+                height: 150px;
+            }
+            
+        }
+        .eye{
+            background-color: yellow;
+            padding: 1rem;
+            width: 80%;
+            height: 20%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50px;
+        }
+        .eye .eye1{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-name: eyeleft;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: 3s;
+        }
+        
+        @keyframes eyeleft {
+            from{
+                left: 50%;
+            }to{
+                left: 20%;
+            }
+        }
+
+        .eye .eye2{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            animation-name: eyeright;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            animation-delay: 3s;
+        }
+
+        @keyframes eyeright {
+            from{
+                left: 50%;
+                
+            }to{
+                left: 80%;
+            }
+        }
+
+        .div1 .smile{
+            position: absolute;
+            width: 30%;
+            height: 30%;
+            /* background-color: red; */
+            border-bottom: 8px solid red;
+            /* border-radius: 50%; */
+            /* border-style: ; */
+            border-radius: 50px;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%,-80%);
+            animation-name: smile;
+            animation-duration: 1s;
+            animation-delay: 4s;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+            opacity: 0;
+
+
+        }
+        
+        @keyframes smile {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="div1">
+            <div class="eye">
+                <div class="eye1"></div>
+                <div class="eye2"></div>
+            </div>
+
+            <div class="smile">
+
+            </div>
+        </div>
+        <div class="div2">
+
+        </div>
+        <div class="div3">
+
+        </div>
+    </main>
+    
+</body>
+</html>

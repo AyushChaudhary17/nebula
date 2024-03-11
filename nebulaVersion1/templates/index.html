@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8f40415482.js" crossorigin="anonymous">
+
+    </script>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>Home</title>
+</head>
+<body>  
+    <header class="header">
+        <div class="hamburger-menu">
+            <div class="cross">
+                <i class="fa-solid fa-xmark crossIcon"></i>
+            </div>
+            <div class="burgerImageBox">
+                <div class="burgerImage">
+                    <img src="{{url_for('static',filename='IMG_20230126_182533449_PORTRAIT (1).jpg')}}" alt="" class="bimage">
+                </div>
+            </div>    
+            <div class="burgerList">
+                <ul>
+                    <li class="blistItems"><a href="" class="blistLinks"><h3 class="heading3">my profile</h3></a></li>
+                    <li class="blistItems"><a href="" class="blistLinks"><h3 class="heading3">chat history</h3></a></li>
+                    <li class="blistItems"><a href="" class="blistLinks"><h3 class="heading3">logout</h3></a></li>
+                </ul>
+            </div>        
+        </div>
+        <nav class="navbar">
+            <div class="logobox">
+                <div class="imagebox">
+                    <a href="/about">
+
+                        <img src="{{url_for('static',filename='27,200+ Chat Bot Stock Photos, Pictures & Royalty-Free Images.jpeg')}}" alt="">
+                    </a>
+                </div>
+                <div class="titlebox">
+                    <h1 class="heading1"></h1>
+                    <div></div>
+                </div>
+            </div>
+            <div class="navbox">
+                <div class="listbox">
+                    <ul>
+                        <li class="listitems"><a href="" class="listlinks"><h2 class="heading2">home</h2></a></li>
+                        <li class="listitems"><a href="/about" class="listlinks"><h2 class="heading2">about</h2></a></li>
+                        <li class="listitems"><a href="" class="listlinks"><h2 class="heading2">contact</h2></a></li>
+                    </ul>
+                </div>
+                <div class="profilebox">
+                    <div class="profileimg">
+                        <img src="{{url_for('static',filename='IMG_20230126_182533449_PORTRAIT (1).jpg')}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="main">
+        <main class="chatarea">
+            <div class="chatbox-message-content">
+                                
+                <!-- <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+    
+                <div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+
+                                
+                <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+                    
+                </div>
+    
+                <div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+
+                                
+                <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+                    
+                </div>
+    
+                <div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+
+                                
+                <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+    
+                <div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+
+                                
+                <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div>
+    
+                <div class="chatbox-message-item recieved">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo in, dolore dolor consequuntur placeat fugiat ipsam reiciendis minima repellendus.
+    
+                    </span>
+                    <span class="chatbox-message-item-time">
+                        8:30
+                    </span>
+    
+                </div> -->
+            </div>
+            
+
+        </main>
+        <form method="post" action="" class="inputarea" >
+
+            <textarea name="text_message" id="" cols="" rows="" class="userinput" placeholder="Enter your prompt here"></textarea>
+            <div class="icons">
+                <input type="submit" value="enter" class="inputBtn">
+
+                    <!-- <i class="fa-solid fa-arrow-up-from-bracket icon enter"></i> -->
+                
+                <i class="fa-solid fa-microphone icon microphone"></i>
+            </div>
+        </form>
+                    <!-- <input type="text" class="userinput" placeholder="Enter your promt here"> -->
+    </section>
+
+    <!-- <main class="container main">
+        <div class="chatbox">
+            <div class="chatarea"></div>
+            <div class="inputarea">
+                <input type="text" class="userinput" placeholder="Enter your promt here"> -->
+                <!-- <textarea name="" id="" cols="" rows="" class="userinput" placeholder="Enter your prompt here"></textarea> -->
+                <!-- <div class="icons">
+                    <i class="fa-solid fa-arrow-up-from-bracket icon"></i>
+                    <i class="fa-solid fa-microphone icon"></i>
+                </div>
+            </div>
+        </div>
+    </main> --> 
+    <footer class="footer">
+       <p>nebula copyright &copy;, 2024 all rights are reserved.</p> 
+    </footer>
+
+    
+    <script src="{{url_for('static',filename='file2.js')}}" type="module">
+    
+    </script>
+</body>
+</html>
