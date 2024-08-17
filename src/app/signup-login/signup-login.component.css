@@ -1,0 +1,224 @@
+.chatBtn{
+    background-color: red;
+    color: white;
+}
+.bg-fade{
+    background-color: rgba(0, 0, 0, 0.579);
+}
+
+/* NavBar Styling........... */
+
+
+
+/* ............ Login Box Styling.sssss........... */
+
+
+.form-container{
+    --color-primary: #ff0052;
+    --color-primary-dark: #ff0052;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #ff0052;
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    font-size: 18px;
+    background-size: cover;
+    --border-radius: 4px;
+    position: absolute;
+    width: 100%;
+
+    backdrop-filter: blur(10px);
+    z-index: 30;
+    position: fixed;
+    /* border: 2px solid red; */
+    top: 0%;
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%); */
+
+
+}
+.formBox {
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: #ffffff;
+    position: relative;
+    top: 40%;
+    left: 45%;
+    transform: translate(-40%,-40%);
+
+    
+}
+
+.formBox,
+.form__input,
+.form__button {
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.form--hidden {
+    display: none;
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-bottom: 0;
+}
+
+.form__title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form__message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form__message--success {
+    color: var(--color-success);
+}
+
+.form__message--error {
+    color: var(--color-error);
+}
+
+.form__input-group {
+    margin-bottom: 1rem;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form__input:focus {
+    border-color: var(--color-primary);
+    background: #ffffff;
+}
+
+.form__input--error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.form__input-error-message {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.form__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background-color: #0d6efd;
+}
+
+.form__button:hover {
+    background: var(--color-primary-dark);
+}
+
+.form__button:active {
+    transform: scale(0.98);
+}
+
+.form__text {
+    text-align: center;
+}
+
+.form__link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover {
+    text-decoration: underline;
+}
+
+
+/* for decoration........... */
+
+.lightBox {
+    /* width: 200px; */
+    /* height: 200px; */
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lightBox::before{
+    content: "";
+    background-image: conic-gradient(
+        #ff0052 20deg,
+        transparent 120deg
+    );
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+ }
+.lightBox::after{
+    content: "";
+    width: 96%;
+    height: 96%;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff0052;
+    font-size: larger;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+/* Cross icon */
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .close-icon:hover {
+    color: red; /* Change color on hover */
+  }
+  

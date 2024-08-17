@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Nebula';
+
+  title:string = "Nebula";
+
+  isLoginVisible: boolean = false;
+
+  onLoginClicked() {
+    this.isLoginVisible = !this.isLoginVisible; // Toggle the visibility of the login component
+  }
+  
+  ngOnInit(): void {}
 }

@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+/* @import '~swiper/swiper-bundle.min.css'; */
+
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+body{
+    background-color: black;
+}
+
+/* Utility Classes ....... */
+.color-white{
+    color: white;
+}
+.bg-black{
+    background-color: black;
+}
+
+.rise{
+    z-index: 10;
+}
+a{
+    color: white;
+}
+svg{
+    color: white;
+}
+
+.pointer{
+    cursor: pointer;
+}
+.underline{
+    text-decoration: underline;
+}
+.underline-red{
+    text-decoration: underline;
+    color: #0d6efd;
+}
+
+.link{
+    color: white;
+}
+.link:hover{
+    color: #0d6efd;
+}
+.border-none{
+    border: none;
+}
+/* Swiper Css  */
+
+/* styles.css */
+
+/* scollbar........ */
+/* For WebKit Browsers */
+::-webkit-scrollbar {
+    width: 15px; /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: black; /* background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey; /* color of the scrollbar thumb */
+    border-radius: 10px; /* roundness of the scrollbar thumb */
+    border: 3px solid black; /* creates space around thumb */
+    /* max-height: 10%; */
+}
