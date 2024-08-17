@@ -1,15 +1,33 @@
 <nav class="navbar navbar-expand-md fixed-top navbar-shrink py-3 bg-fade" id="mainNav">
-    <div class="container"><a class="navbar-brand d-flex align-items-center"><span class="color-white">{{title}}</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center">
+            <span class="color-white">{{ title }}</span>
+        </a>
+        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
+            <span class="visually-hidden">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse navList" id="navcol-1">
-            <ul class="navbar-nav ms-auto  me-4">
-                <li class="nav-item"><span class="nav-link link color-white pointer" (click)="scrollToHome()">Home</span></li>
-                <li class="nav-item"><span class="nav-link link color-white pointer" (click)="scrollToTeams()">Team</span></li>
-                <li class="nav-item"><span class="nav-link link color-white pointer" (click)="scrollToPricing()">Pricing</span></li>
-                <li class="nav-item"><span class="nav-link link color-white pointer" (click)="scrollToContact()">Contacts</span></li>
+            <ul class="navbar-nav ms-auto me-4">
+                <li class="nav-item">
+                    <a class="nav-link link color-white pointer" (click)="scrollToHome()" [routerLink]="['/home']">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link color-white pointer" (click)="scrollToTeams()">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link color-white pointer" (click)="scrollToPricing()">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link color-white pointer" (click)="scrollToContact()">Contacts</a>
+                </li>
             </ul>
-            <a class="btn btn-primary shadow border-none me-4 chatBtn" role="button" *ngIf="isAuthentication" [routerLink]='["/chat"]'>Start Chat</a>
-            <span class="btn btn-primary shadow me-4 pointer" role="button" (click)="onLoginClick()">login</span>
+            <a class="btn btn-primary shadow border-none me-4 chatBtn" role="button" *ngIf="isAuthentication" [routerLink]="['/chat']">Start Chat</a>
+            <a class="btn btn-primary shadow me-4 pointer" role="button" [routerLink]="['/login']">Login</a>
         </div>
     </div>
-    
 </nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

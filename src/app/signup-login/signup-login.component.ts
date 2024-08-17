@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { ChangeDetectorRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup-login',
@@ -8,7 +9,7 @@ import { ChangeDetectorRef } from '@angular/core';
 })
 export class SignupLoginComponent implements OnInit {
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, private router:Router) {}
 
   isLoginVisible:boolean=true;
   // @Input() isLoginClicked:boolean = false;
@@ -54,10 +55,13 @@ export class SignupLoginComponent implements OnInit {
 
   loginCrox(){
     this.isLoginVisible=false
+    this.router.navigate(['/home']);
+
   }
 
   registerCrox(){
     this.register=false;
+    this.router.navigate(['/home']);
   }
 
   private showLogin() {
